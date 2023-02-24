@@ -3,7 +3,6 @@
 public class Purchase {
     protected String title;
     protected int count;
-    protected Purchase[] purchases = new Purchase[4];
 
     public Purchase(String title, int count) {
         this.title = title;
