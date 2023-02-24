@@ -1,25 +1,19 @@
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        HashMap<String, Integer> products = new HashMap<>();
-        products.put("Хлеб", 56);
-        products.put("Масло", 153);
-        products.put("Колбаса", 211);
-        products.put("Пирожок", 45);
 
         System.out.println("В МАГАЗИНЕ В НАЛИЧИИ");
-        for (Map.Entry<String, Integer> productAndPrice : products.entrySet()) {
+        for (Map.Entry<String, Integer> productAndPrice : ListOfProducts.products.entrySet()) {
             System.out.println(productAndPrice.getKey() + " за " + productAndPrice.getValue() + " руб./шт.");
         }
 
         System.out.println("Введите два слова: название товара и количество. Или end");
         Scanner scanner = new Scanner(System.in);
         //Меняем класс Purchase на Basket ниже;
-        Basket purchase = new Basket(products);
+        Basket purchase = new Basket(ListOfProducts.products);
         while (true) {
             String line = scanner.nextLine();
             if ("end".equals(line)) break;
