@@ -1,5 +1,5 @@
-import java.util.HashMap;
+import java.util.Map;
 
 public interface IntOfProducts {
-    HashMap<String, Integer> getProducts();
+    Map<String, Integer> getProducts();
 }
